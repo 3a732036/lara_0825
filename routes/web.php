@@ -49,7 +49,7 @@ Route::get('/', function () {
 //        $post=Post::find(1);
 //        $post->delete();
 
-    Post::destroy(4);
+    Post::destroy(4, 6, 9);
 });
 
 
