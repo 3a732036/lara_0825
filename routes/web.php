@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('posts'  , [\App\Http\Controllers\PostsController::class, 'index']);
-Route::get('post'   , [\App\Http\Controllers\PostsController::class, 'show']);
-Route::get('contact', [\App\Http\Controllers\PostsController::class, 'contact']);
-Route::get('about'  , [\App\Http\Controllers\PostsController::class, 'about']);
+Route::get('posts'  , [\App\Http\Controllers\PostsController::class, 'index'])  ->name('posts.index');
+Route::get('post'   , [\App\Http\Controllers\PostsController::class, 'show'])   ->name('posts.show');
+Route::get('contact', [\App\Http\Controllers\PostsController::class, 'contact'])->name('posts.contact');
+Route::get('about'  , [\App\Http\Controllers\PostsController::class, 'about'])  ->name('posts.about');
