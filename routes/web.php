@@ -21,12 +21,16 @@ Route::get('/', function () {
 //    $post->content='test content';
 //    $post->save();
 
-    Post::create([
-        'title'     =>'test title2',
-        'content'   =>'test content2'
-    ]);
+//    Post::create([
+//        'title'     =>'test title2',
+//        'content'   =>'test content2'
+//    ]);
+
+    $post=\App\Models\Post::all();
+    dd($post);
 
 });
+
 
 Route::get('posts'  , [\App\Http\Controllers\PostsController::class, 'index'])  ->name('posts.index');
 Route::get('post'   , [\App\Http\Controllers\PostsController::class, 'show'])   ->name('posts.show');
